@@ -3,10 +3,29 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>F.Y.H.</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>FranHec</title>
 	<style type="text/css">
 		* {
 		  box-sizing: border-box;
+		}
+		#carrusel{
+			visibility: hidden;
+			height: 0px;
+		}
+
+		#carrusel *{
+			height: 0px;
+		}
+
+		#galeria{
+			height: auto;
+			visibility: visible;
+		}
+		#galeria *{
+			height: auto;
 		}
 
 		body {
@@ -39,18 +58,27 @@
 		}
 
 		/* Responsive layout - makes a two column-layout instead of four columns */
-		@media (max-width: 800px) {
-		  .column {
-		    flex: 50%;
-		    max-width: 50%;
-		  }
-		}
 
 		/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-		@media (max-width: 600px) {
+		@media (max-width: 800px) {
 		  .column {
 		    flex: 100%;
 		    max-width: 100%;
+		  }
+
+		  #carrusel{
+		  	visibility: visible;
+		  	height: auto;
+		  }
+		  #carrusel *{
+		  	height: auto;
+		  }
+		  #galeria{
+		  	visibility: hidden;
+		  	height: 0;
+		  }
+		  #galeria *	{
+		  	height: 0;
 		  }
 		}
 
@@ -70,8 +98,9 @@
 			height:400px!important;
 		}
 
-		.container{
+		.contenedor{
 			padding: 3rem;
+			height: auto;
 		}
 		#slogo{
 			text-align: center;
@@ -89,6 +118,7 @@
 			position: relative;
     		text-align: center;
 		}
+		
 		.img_of h1{
 			color: #F5F5F5;
 			position: absolute;
@@ -96,42 +126,146 @@
 		    left: 50%;
 		    transform: translate(-50%, -50%);
 		}
+
+
+		.carousel-inner > .item > img,
+  		.carousel-inner > .item > a > img {
+	      	width: 60%;
+	      	margin: auto;
+	  	}
 	</style>
 </head>
 <body style="background-image: url('img/bgdepa.webp'); background-size: 100% 100%;">
-	<a aria-label="Reserva aquí" href="https://wa.me/+51945823726" />
-	<div class="container">
+	
+	<div class="contenedor">
 		<div id="slogo" style="border-bottom:1rem;">
 			<div class="img_of">
-				<h1 id="Tlogo">Departamentos FYH</h1>
+				<h1 id="Tlogo">Departamentos FranHec</h1>
 				<img src="img/comedor.jpeg" width="100%">
 			</div>
 		</div>
-		<div class="row" style="border-bottom: 2px solid #333333; padding-bottom: 1rem;padding-top: 1rem;border-top: 2px solid #333333;"> 
-		  <div class="column">
-		    <img src="img/comedor.jpeg" style="width:100%">
-		    <img src="img/sala.jpeg" style="width:100%">
-		    <img src="img/cocina.jpeg" style="width:100%">
-		  </div>
-		  <div class="column">
-		    <img src="img/hab1.jpeg" style="width:100%">
-		    <img src="img/hab2.jpeg" style="width:100%">
-		    <img src="img/lavanderia.jpeg" style="width:100%">
-		  </div>
-		    <div class="column">
-		    <img src="img/b1.jpeg" style="width:100%">
-		    <img src="img/b2.jpeg" style="width:100%">
-		  </div>
+
+		<div id="carrusel" class="container">
+		  	<br>
+		  	<div id="theCarousel" class="carousel slide" data-ride="carousel">
+			    <!-- Indicadores -->
+			    <ol class="carousel-indicators">
+			      	<li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+			      	<li data-target="#theCarousel" data-slide-to="1"></li>
+			      	<li data-target="#theCarousel" data-slide-to="2"></li>
+			      	<li data-target="#theCarousel" data-slide-to="3"></li>
+			       	<li data-target="#theCarousel" data-slide-to="4"></li>
+			       	<li data-target="#theCarousel" data-slide-to="5"></li>
+			       	<li data-target="#theCarousel" data-slide-to="6"></li>
+			       	<li data-target="#theCarousel" data-slide-to="7"></li>
+
+			      
+			    </ol>
+
+			    <div class="carousel-inner" role="listbox">
+			      	<div class="item active">
+			        	<img src="img/comedor.jpeg" alt="Ilustracion" > 
+			      	</div>
+
+			     
+			    
+			     	<div class="item">
+			        	<img src="img/sala.jpeg" alt="fotografia" width="600" height="424"> 
+		         		<div class="carousel-caption d-none d-md-block">
+			  			</div>
+			      	</div>
+
+			      	<div class="item">
+			        	<img src="img/cocina.jpeg" alt="fotografia" width="600" height="424"> 
+		         		<div class="carousel-caption d-none d-md-block">
+			  			</div>
+			      	</div>
+
+			      	<div class="item">
+			        	<img src="img/hab1.jpeg" alt="fotografia" width="600" height="424"> 
+		         		<div class="carousel-caption d-none d-md-block">
+			  			</div>
+			      	</div>
+
+			      	<div class="item">
+			        	<img src="img/hab2.jpeg" alt="fotografia" width="600" height="424"> 
+		         		<div class="carousel-caption d-none d-md-block">
+			  			</div>
+			      	</div>
+
+			      	<div class="item">
+			        	<img src="img/b1.jpeg" alt="fotografia" width="600" height="424"> 
+		         		<div class="carousel-caption d-none d-md-block">
+			  			</div>
+			      	</div>
+
+			      	<div class="item">
+			        	<img src="img/b2.jpeg" alt="fotografia" width="600" height="424"> 
+		         		<div class="carousel-caption d-none d-md-block">
+			  			</div>
+			      	</div>
+			      	<div class="item">
+			        	<img src="img/lavanderia.jpeg" alt="fotografia" width="600" height="424"> 
+		         		<div class="carousel-caption d-none d-md-block">
+			  			</div>
+			      	</div>
+			      
+			      
+			     
+			    </div>
+
+
+			    <a class="left carousel-control" href="#theCarousel" role="button" data-slide="prev">
+			      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			      <span class="sr-only">anterior</span>
+			    </a>
+
+			    <a class="right carousel-control" href="#theCarousel" role="button" data-slide="next">
+			      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			      <span class="sr-only">siguiente</span>
+			    </a>
+
+			</div>
 		</div>
-		<div class="ubi">
-			<h1 style="color: #B1975B;">Ubicanos:</h1>
-			<div class="mapouter">
-				<div class="gmap_canvas section">
-					<iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=AR-545+%2F+San+Juan+Bautista+Navarrete+245,+Camaná+04451&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+
+
+		<div id="galeria" class="row" style="border-bottom: 2px solid #333333; padding-bottom: 1rem;padding-top: 1rem;border-top: 2px solid #333333;"> 
+			  <div class="column">
+			    <img src="img/comedor.jpeg" style="width:100%">
+			    <img src="img/b2.jpeg" style="width:100%">
+			  </div>
+			  <div class="column">
+			  	<img src="img/sala.jpeg" style="width:100%">
+			    <img src="img/hab1.jpeg" style="width:100%">
+			    
+			    <img src="img/lavanderia.jpeg" style="width:100%">
+			  </div>
+			    <div class="column">
+			    <img src="img/cocina.jpeg" style="width:100%">
+			    <img src="img/hab2.jpeg" style="width:100%">
+			    <img src="img/b1.jpeg" style="width:100%">
+			    
+			    
+			  </div>
+			</div>
+			<div class="ubi">
+				<h1 style="color: #B1975B;">Ubicanos:</h1>
+				<div class="mapouter">
+					<div class="gmap_canvas section">
+						<iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=AR-545+%2F+San+Juan+Bautista+Navarrete+245,+Camaná+04451&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+
+	<a href="https://wa.me/+51945823726" style="background-color: #dcf8c6;border-radius: 10px; border:2px solid #25d366;padding:3px 3px 3px 3px;margin:1rem;position: fixed;display:flex;justify-content: center; bottom: 0px;right: 0px;text-decoration: none; color: #25d366;font-size: 20px;"><img alt="Chat on WhatsApp" src="img/wppicon.png" height="20px" style="margin-right: 5px;" />RESERVA YA
+	<a />
+
+
+
+	
+
+	
 </body>
 
 
