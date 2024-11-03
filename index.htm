@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>H.Y.F.</title>
+	<title>F.Y.H.</title>
 	<style type="text/css">
 		* {
 		  box-sizing: border-box;
@@ -35,6 +35,7 @@
 		.column img {
 		  margin-top: 8px;
 		  vertical-align: middle;
+
 		}
 
 		/* Responsive layout - makes a two column-layout instead of four columns */
@@ -72,32 +73,65 @@
 		.container{
 			padding: 3rem;
 		}
+		#slogo{
+			text-align: center;
+		}
+		.Tlogo{
+			position: relative;
+			text-align: center;
+			width: 100%;
+
+		}
+		.img_of{
+			overflow: hidden;
+			height:300px;
+			display: inline-block;
+			position: relative;
+    		text-align: center;
+		}
+		.img_of h1{
+			color: #F5F5F5;
+			position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		}
 	</style>
 </head>
-<body>
-<div class="container">
-	<div class="row"> 
-	  <div class="column">
-	    <img src="img/comedor.jpeg" style="width:100%">
-	    <img src="img/sala.jpeg" style="width:100%">
-	    <img src="img/cocina.jpeg" style="width:100%">
-	  </div>
-	  <div class="column">
-	  	<img src="img/lavanderia.jpeg" style="width:100%">
-	    <img src="img/hab1.jpeg" style="width:100%">
-	    <img src="img/hab2.jpeg" style="width:100%">
-	  </div>
-	    <div class="column">
-	    <img src="img/b1.jpeg" style="width:100%">
-	    <img src="img/b2.jpeg" style="width:100%">
-	  </div>
-	</div>
-	<div class="mapouter">
-		<div class="gmap_canvas section">
-			<iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=AR-545+%2F+San+Juan+Bautista+Navarrete+245,+Camaná+04451&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+<body style="background-image: url('img/bgdepa.webp'); background-size: 100% 100%;">
+	
+	<div class="container">
+		<div id="slogo" style="border-bottom:1rem;">
+			<div class="img_of">
+				<h1 id="Tlogo">Departamentos FYH</h1>
+				<img src="img/comedor.jpeg" width="100%">
+			</div>
+		</div>
+		<div class="row" style="border-bottom: 2px solid #333333; padding-bottom: 1rem;padding-top: 1rem;border-top: 2px solid #333333;"> 
+		  <div class="column">
+		    <img src="img/comedor.jpeg" style="width:100%">
+		    <img src="img/sala.jpeg" style="width:100%">
+		    <img src="img/cocina.jpeg" style="width:100%">
+		  </div>
+		  <div class="column">
+		    <img src="img/hab1.jpeg" style="width:100%">
+		    <img src="img/hab2.jpeg" style="width:100%">
+		    <img src="img/lavanderia.jpeg" style="width:100%">
+		  </div>
+		    <div class="column">
+		    <img src="img/b1.jpeg" style="width:100%">
+		    <img src="img/b2.jpeg" style="width:100%">
+		  </div>
+		</div>
+		<div class="ubi">
+			<h1 style="color: #B1975B;">Ubicanos:</h1>
+			<div class="mapouter">
+				<div class="gmap_canvas section">
+					<iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=AR-545+%2F+San+Juan+Bautista+Navarrete+245,+Camaná+04451&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
 </body>
 
 
